@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo 'Download Last Version for next execute'
+echo 'Download Last Version for next execute V2'
 
 curl -H 'Cache-Control: no-cache' -L -o /root/itfinden_service.update https://raw.githubusercontent.com/itfinden/disable_cpanel_service/main/itfinden_service.sh
 
