@@ -4,6 +4,8 @@ function disable_service(){
 	cd /root
 for service in \
    aibolit-resident\
+   abrt-ccpp\
+   abrt-oops\
    fastmail ;
    do
 echo "Desactivando el service: ${service}"
@@ -16,6 +18,7 @@ systemctl disable ${service} &>/dev/null
 done
 /scripts/restartsrv_chkservd
 }
+
 
 disable_service
 
