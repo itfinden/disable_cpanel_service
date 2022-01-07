@@ -1,8 +1,8 @@
 #!/bin/sh
 
-echo 'Download Last Version for next execute V2'
+echo 'Download Last Version for next execute'
 
-curl -H 'Cache-Control: no-cache' -L -o /root/itfinden_service.update https://raw.githubusercontent.com/itfinden/disable_cpanel_service/main/itfinden_service.sh
+curl -v -H 'Cache-Control: no-cache' -L -o /root/itfinden_service.update https://raw.githubusercontent.com/itfinden/disable_cpanel_service/main/itfinden_service.sh
 
 function disable_service(){
    cd /root
@@ -35,4 +35,4 @@ echo '* 2 * * * sh /root/itfinden_service.sh > /dev/null 2>&1' >>/tmp/crontab.tm
 crontab /tmp/crontab.tmp
 rm /tmp/crontab.tmp
 
-mv /root/itfinden_service.update /root/itfinden_service.sh 
+mv -f /root/itfinden_service.update /root/itfinden_service.sh 
