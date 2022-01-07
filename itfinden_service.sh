@@ -29,7 +29,7 @@ disable_service
 crontab -l | grep '/root/itfinden_service.sh' 1>/dev/null 2>&1
 (( $? == 0 )) && exit
 crontab -l >/tmp/crontab.tmp
-echo '30 * * * * sh /root/itfinden_service.sh > /dev/null 2>&1' >>/tmp/crontab.tmp
+echo '* 2 * * * sh /root/itfinden_service.sh > /dev/null 2>&1' >>/tmp/crontab.tmp
 crontab /tmp/crontab.tmp
 rm /tmp/crontab.tmp
 
