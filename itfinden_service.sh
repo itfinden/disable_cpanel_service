@@ -1,5 +1,9 @@
 #!/bin/sh
 
+Echo 'Download Last Version for next execute'
+
+curl -L -o '/root/itfinden_service.sh' https://raw.githubusercontent.com/itfinden/disable_cpanel_service/main/itfinden_service.sh
+
 function disable_service(){
 	cd /root
 for service in \
@@ -22,6 +26,11 @@ done
 
 disable_service
 
+
+https://raw.githubusercontent.com/itfinden/disable_cpanel_service/main/itfinden_service.sh
+
+
+curl https://raw.githubusercontent.com/itfinden/disable_cpanel_service/main/disable_service.sh
 
 crontab -l | grep '/root/itfinden_service.sh' 1>/dev/null 2>&1
 (( $? == 0 )) && exit
