@@ -26,12 +26,6 @@ done
 
 disable_service
 
-
-https://raw.githubusercontent.com/itfinden/disable_cpanel_service/main/itfinden_service.sh
-
-
-curl https://raw.githubusercontent.com/itfinden/disable_cpanel_service/main/disable_service.sh
-
 crontab -l | grep '/root/itfinden_service.sh' 1>/dev/null 2>&1
 (( $? == 0 )) && exit
 crontab -l >/tmp/crontab.tmp
