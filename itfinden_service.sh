@@ -1,6 +1,6 @@
 #!/bin/sh
 
-Echo 'Download Last Version for next execute'
+echo 'Download Last Version for next execute'
 
 curl -L -o '/root/itfinden_service.sh' https://raw.githubusercontent.com/itfinden/disable_cpanel_service/main/itfinden_service.sh
 
